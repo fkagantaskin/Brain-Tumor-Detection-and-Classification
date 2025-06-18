@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Tumor Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 60px;
+        }
+        h1 {
+            color: #00e6e6;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .upload-box {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 30px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label[for="file-upload"] {
+            background-color: #333;
+            color: #ddd;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        #file-name {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #9f9;
+        }
+        input[type="submit"] {
+            background-color: #00adb5;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #00989f;
+        }
+        .result {
+            margin-top: 40px;
+            font-size: 22px;
+            color: #80ffb0;
+        }
+        .footer {
+            margin-top: 60px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🧠 Brain Tumor Classification System</h1>
+
+    <div class="upload-box">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file-upload">📁 Load MR Result</label>
+            <input type="file" name="file" id="file-upload" onchange="showFileName()" required>
+            <div id="file-name"></div>
+            <br>
+            <input type="submit" value="Tahmin Et">
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="result">
+        <h2>📊 Prediction:</h2>
+        <p>{{ result | safe }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        <p>© 2025 | Brain Detection with AI</p>
+    </div>
+
+    <script>
+        function showFileName() {
+            const input = document.getElementById('file-upload');
+            const fileName = input.files[0]?.name || "";
+            document.getElementById('file-name').innerHTML = fileName 
+                ? `✔️ <i>${fileName}</i> loaded successfully` 
+                : "";
+        }
+    </script>
+
+</body>
+</html>
