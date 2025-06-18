@@ -3,6 +3,11 @@
 Bu proje, beyin tümörlerini "MRI görüntüleri" üzerinden sınıflandırmak amacıyla geliştirilmiştir. Derin öğrenme teknikleri kullanılarak, bir MRI görüntüsünde Tümör olup olmadığı ve varsa üç sınıftan hangisine ait olduğunu belirleyen bir model oluşturulmuştur:  
 **Glioma**, **Meningioma**, **Pituitary** ve **No Tumor** (Tümör Yok).
 
+## 🎥 Proje Tanıtım Videosu
+
+📺 [Projeyi YouTube’da izlemek için tıklayın (Türkçe)](https://www.youtube.com/watch?v=WbDf-9nnR3c)
+
+
 ## Kullanılan Veri Seti
 - Kaynak: [Kaggle Brain Tumor MRI Dataset]
 - Sınıflar:  

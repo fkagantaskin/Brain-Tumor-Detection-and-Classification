@@ -3,6 +3,11 @@
 This project is designed to classify brain tumors using **MRI images**. With the help of deep learning techniques, a model was developed to determine whether there is a tumor in an MRI image and, if so, to classify it into one of the following categories:  
 **Glioma**, **Meningioma**, **Pituitary**, and **No Tumor**.
 
+## 🎥 Project Demo Video
+
+📺 [Watch the project presentation on YouTube (in Turkish)](https://www.youtube.com/watch?v=WbDf-9nnR3c)
+
+
 ## Dataset Used
 - Source: [Kaggle Brain Tumor MRI Dataset]
 - Classes:  
